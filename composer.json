@@ -1,0 +1,24 @@
+{
+  "name": "hanibal4nothing/easy-console",
+  "description": "simple console package",
+  "type": "console",
+  "license": "MIT",
+  "keywords": [
+    "console"
+  ],
+  "authors": [
+    {
+      "name": "Felix Buchheim",
+      "email": "hanibal4nothing@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "hanibal4nothing/simple-collection": "^1.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "EasyConsole": "src/"
+    }
+  }
+}

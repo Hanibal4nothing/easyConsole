@@ -1,0 +1,60 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "caf822a5e92796ac86f6c49b1205d5b6",
+    "content-hash": "d7737638c7ee818dbac61e4a80426f45",
+    "packages": [
+        {
+            "name": "hanibal4nothing/simple-collection",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Hanibal4nothing/SimpleCollection.git",
+                "reference": "232d333c039f955d1202410a6a8e2d5f07246378"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Hanibal4nothing/SimpleCollection/zipball/232d333c039f955d1202410a6a8e2d5f07246378",
+                "reference": "232d333c039f955d1202410a6a8e2d5f07246378",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "entity-management",
+            "autoload": {
+                "psr-0": {
+                    "SimpleCollection": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Felix Buchheim",
+                    "email": "hanibal4nothing@gmail.com"
+                }
+            ],
+            "description": "simple package for abstract collection with entities",
+            "keywords": [
+                "EntityCollection"
+            ],
+            "time": "2016-04-13 13:45:58"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.5"
+    },
+    "platform-dev": []
+}
