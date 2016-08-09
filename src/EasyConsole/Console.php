@@ -26,6 +26,13 @@ class Console
     protected $cmdColor;
 
     /**
+     * Last length of stream output
+     *
+     * @var int
+     */
+    protected $lastStreamLength = 0;
+
+    /**
      * Console constructor.
      *
      * @param CmdColor|null $oColorCmd
@@ -66,7 +73,7 @@ class Console
     public function breakLine($iTimes = 1)
     {
         for ($i = 0; $i < $iTimes; $i++) {
-            echo PHP_EOL;
+            $this->speak(PHP_EOL);
         }
 
         return $this;
@@ -148,11 +155,29 @@ class Console
      */
     public function streamOutput($sContent, $sColor = null, $sBackgroundColor = null)
     {
+        $this->removeStreamOutput();
+
         if (true === isset($sColor)) {
-            $this->cmdColor->echoString("\r" . $sContent, $sColor, $sBackgroundColor);
+            $this->cmdColor->echoString($sContent, $sColor, $sBackgroundColor . "\r");
         } else {
-            echo "\r" . $sContent;
+            echo $sContent . "\r";
         }
+        $this->lastStreamLength = strlen($sContent);
+
+        return $this;
+    }
+
+    /**
+     * Remove the current streamOutput
+     *
+     * @return $this
+     */
+    public function removeStreamOutput()
+    {
+        if (false === empty($this->lastStreamLength)) {
+            $this->speak(str_repeat(' ', $this->lastStreamLength) . "\r");
+        }
+        $this->lastStreamLength = 0;
 
         return $this;
     }
